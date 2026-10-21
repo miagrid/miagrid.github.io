@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="홍길동의 개인 홈페이지 — 소개, 프로젝트, 연락처">
+  <title>홍길동 | 개인 홈페이지</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="주요 메뉴">
+      <a href="#top" class="logo">홍길동</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#about">소개</a></li>
+        <li><a href="#projects">프로젝트</a></li>
+        <li><a href="#contact">연락처</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero container">
+      <p class="hero-eyebrow">안녕하세요 👋</p>
+      <h1>사람을 위한 웹을 만드는<br><span class="accent">프론트엔드 개발자</span> 홍길동입니다.</h1>
+      <p class="hero-lead">단순하고 접근성 좋은 인터페이스를 고민하며, 작은 디테일이 만드는 큰 차이를 믿습니다.</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">프로젝트 보기</a>
+        <a href="#contact" class="btn btn-ghost">연락하기</a>
+      </div>
+    </section>
+
+    <section id="about" class="section container">
+      <h2 class="section-title">소개</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>저는 5년 차 웹 개발자로, 사용자 경험을 최우선으로 생각하며 일합니다. 스타트업과 중견 기업에서 다양한 서비스의 프론트엔드를 설계하고 구현해 왔습니다.</p>
+          <p>새로운 기술을 배우는 것을 좋아하고, 배운 것을 글과 발표로 나누는 일에서 보람을 느낍니다. 일하지 않을 때는 사진을 찍거나 동네 산책로를 걷습니다.</p>
+        </div>
+        <div class="skills">
+          <h3>주요 기술</h3>
+          <ul class="tag-list">
+            <li>HTML / CSS</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>웹 접근성</li>
+            <li>UI 디자인</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section container">
+      <h2 class="section-title">프로젝트</h2>
+      <div class="project-grid">
+        <article class="card">
+          <h3>할 일 관리 앱</h3>
+          <p>오프라인에서도 동작하는 PWA 기반 할 일 관리 서비스입니다. 드래그 앤 드롭 정렬과 알림 기능을 지원합니다.</p>
+          <ul class="tag-list small"><li>React</li><li>PWA</li><li>IndexedDB</li></ul>
+          <a href="#" class="card-link">자세히 보기 →</a>
+        </article>
+        <article class="card">
+          <h3>날씨 대시보드</h3>
+          <p>공공 데이터 API를 활용해 지역별 날씨와 미세먼지 정보를 한눈에 보여주는 반응형 대시보드입니다.</p>
+          <ul class="tag-list small"><li>JavaScript</li><li>Chart.js</li><li>REST API</li></ul>
+          <a href="#" class="card-link">자세히 보기 →</a>
+        </article>
+        <article class="card">
+          <h3>디자인 시스템</h3>
+          <p>팀 내 일관된 UI를 위해 버튼, 폼, 모달 등 재사용 가능한 컴포넌트 라이브러리를 구축했습니다.</p>
+          <ul class="tag-list small"><li>TypeScript</li><li>Storybook</li><li>CSS 변수</li></ul>
+          <a href="#" class="card-link">자세히 보기 →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section container">
+      <h2 class="section-title">연락처</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p>협업 제안이나 궁금한 점이 있으시면 언제든 편하게 연락 주세요. 보통 하루 안에 답장드립니다.</p>
+          <ul class="contact-list">
+            <li><strong>이메일</strong> <a href="mailto:hello@example.com">hello@example.com</a></li>
+            <li><strong>깃허브</strong> <a href="https://github.com/" target="_blank" rel="noopener">github.com/gildong</a></li>
+            <li><strong>위치</strong> 대한민국 서울</li>
+          </ul>
+        </div>
+        <form class="contact-form" id="contact-form" novalidate>
+          <label for="name">이름</label>
+          <input type="text" id="name" name="name" placeholder="이름을 입력하세요" required>
+
+          <label for="email">이메일</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+          <label for="message">메시지</label>
+          <textarea id="message" name="message" rows="5" placeholder="전하고 싶은 내용을 적어 주세요" required></textarea>
+
+          <button type="submit" class="btn btn-primary">메시지 보내기</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> 홍길동. 모든 권리 보유.</p>
+      <button class="to-top" id="to-top" aria-label="맨 위로 이동">↑ 맨 위로</button>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
